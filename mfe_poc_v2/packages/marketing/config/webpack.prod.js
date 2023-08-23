@@ -16,7 +16,9 @@ const prodConfig = {
         './MarketingApp': './src/bootstrap',
       },
       // This is a way to share all dependencies and not have to manually update the list.
-      shared: packageJson.dependencies,
+      shared: {
+        ...packageJson.dependencies,
+      },
     }),
   ],
 };
